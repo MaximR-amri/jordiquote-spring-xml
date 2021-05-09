@@ -2,12 +2,13 @@ package be.syntra.cowsay;
 import com.github.ricksbrown.cowsay.Cowsay;
 
 public class DragonCowSay implements CowSay {
-    QuoteDao quoteDao;
-    Quote quote;
+    private QuoteDao quoteDao;
+    private Quote quote;
 
     public void setQuoteDao(QuoteDao quoteDao) {
         this.quoteDao = quoteDao;
     }
+
 
     @Override
     public void showQuote() {

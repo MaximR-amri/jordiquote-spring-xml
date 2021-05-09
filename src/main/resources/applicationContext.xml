@@ -8,8 +8,16 @@
     http://www.springframework.org/schema/context/spring-context.xsd">
 
 	<bean id="cowSay"
-		  class="be.syntra.cowsay.DragonCowSay">
+		  class="be.syntra.cowsay.OriginalCowSay">
+		<property name="quoteDao" ref="quoteDao" />
+
+		<!--  <property name = "field holding object in this class"> <bean id = "ID of innerbean object"/> -->
 	</bean>
+
+	<bean id="quoteDao"
+		  class= "be.syntra.cowsay.QuoteDaoMysql">
+	</bean>
+
 
 </beans>
 

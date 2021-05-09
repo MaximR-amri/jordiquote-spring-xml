@@ -26,8 +26,7 @@ public class App {
 
     CowSay cowSay = context.getBean("cowSay", CowSay.class);
 
-    QuoteDao quoteDao = new QuoteDaoMysql();
-    cowSay.setQuoteDao(quoteDao);
+
     cowSay.showQuote();
 
     Scanner in = new Scanner(System.in);
