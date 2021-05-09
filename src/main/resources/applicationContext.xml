@@ -15,9 +15,8 @@
 	</bean>
 
 	<bean id="cowSay"
-		  class="be.syntra.cowsay.OriginalCowSay">
-		<property name="quoteDao" ref="quoteDao" />
-		<!--  <property name = "field holding object in this class"> <bean id = "ID object to be injected"/> -->
+		  class="be.syntra.cowsay.DragonCowSay">
+		<constructor-arg ref="quoteDao"/>
 	</bean>
 
 	<bean id="quoteDao"

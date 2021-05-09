@@ -5,7 +5,7 @@ public class OriginalCowSay implements CowSay {
     private QuoteDao quoteDao;
     private Quote quote;
 
-    public void setQuoteDao(QuoteDao quoteDao) {
+    public OriginalCowSay(QuoteDao quoteDao) {
         this.quoteDao = quoteDao;
     }
 

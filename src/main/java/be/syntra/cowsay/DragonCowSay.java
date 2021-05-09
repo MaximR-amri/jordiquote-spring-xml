@@ -5,7 +5,7 @@ public class DragonCowSay implements CowSay {
     private QuoteDao quoteDao;
     private Quote quote;
 
-    public void setQuoteDao(QuoteDao quoteDao) {
+    public DragonCowSay (QuoteDao quoteDao) {
         this.quoteDao = quoteDao;
     }
 
