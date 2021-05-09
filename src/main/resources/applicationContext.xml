@@ -7,17 +7,20 @@
     http://www.springframework.org/schema/context
     http://www.springframework.org/schema/context/spring-context.xsd">
 
+	<bean id="loggerConfig" class="be.syntra.common.LoggerConfig" init-method="initLogger">
+		<property name="rootLoggerLevel" value="FINE" />
+		<property name="printedLoggerLevel" value="FINE"/>
+	</bean>
+
 	<bean id="cowSay"
 		  class="be.syntra.cowsay.OriginalCowSay">
 		<property name="quoteDao" ref="quoteDao" />
-
 		<!--  <property name = "field holding object in this class"> <bean id = "ID of innerbean object"/> -->
 	</bean>
 
 	<bean id="quoteDao"
-		  class= "be.syntra.cowsay.QuoteDaoMysql">
+		  class= "be.syntra.cowsay.QuoteDaoDummy">
 	</bean>
-
 
 </beans>
 
