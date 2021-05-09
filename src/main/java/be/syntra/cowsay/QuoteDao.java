@@ -1,6 +1,4 @@
-package be.syntra.dao;
-
-import be.syntra.model.Quote;
+package be.syntra.cowsay;
 
 public interface QuoteDao {
     Quote getRandomQuote();

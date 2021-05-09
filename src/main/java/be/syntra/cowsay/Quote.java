@@ -1,4 +1,4 @@
-package be.syntra.model;
+package be.syntra.cowsay;
 
 import lombok.Data;
 

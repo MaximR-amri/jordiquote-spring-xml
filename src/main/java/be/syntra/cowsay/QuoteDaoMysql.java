@@ -1,20 +1,17 @@
-package be.syntra.daoimpl;
-
-import be.syntra.dao.QuoteDao;
-import be.syntra.model.Quote;
+package be.syntra.cowsay;
 
 import java.io.IOException;
 import java.io.InputStream;
 import java.sql.*;
 import java.util.Properties;
 
-public class QuoteDaoImpl implements QuoteDao {
+public class QuoteDaoMysql implements QuoteDao {
     private static String url;
     private static String usr;
     private static String pass;
 
     static {
-        try (InputStream in = QuoteDaoImpl.class.getResourceAsStream("/app.properties")) {
+        try (InputStream in = QuoteDaoMysql.class.getResourceAsStream("/app.properties")) {
             Properties properties = new Properties();
             properties.load(in);
             url = properties.getProperty("url");
