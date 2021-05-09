@@ -7,7 +7,8 @@ import java.util.Scanner;
 public class App {
 
   public static void main(String[] args) {
-    CowSay cowSay = new DragonCowSay();
+
+    CowSay cowSay = new OriginalCowSay();
     cowSay.showQuote();
     Scanner in = new Scanner(System.in);
     System.out.println("Did you like this quote ? (y/n)");
