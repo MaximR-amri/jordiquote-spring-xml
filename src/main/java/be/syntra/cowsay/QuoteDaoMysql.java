@@ -10,16 +10,16 @@ public class QuoteDaoMysql implements QuoteDao {
     private static String usr;
     private static String pass;
 
-    static {
-        try (InputStream in = QuoteDaoMysql.class.getResourceAsStream("/app.properties")) {
-            Properties properties = new Properties();
-            properties.load(in);
-            url = properties.getProperty("url");
-            usr = properties.getProperty("usr");
-            pass = properties.getProperty("pass");
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+    public static void setUrl(String url) {
+        QuoteDaoMysql.url = url;
+    }
+
+    public static void setUsr(String usr) {
+        QuoteDaoMysql.usr = usr;
+    }
+
+    public static void setPass(String pass) {
+        QuoteDaoMysql.pass = pass;
     }
 
     @Override
