@@ -8,7 +8,7 @@ public class DragonCowSay implements CowSay {
 
 
     public DragonCowSay() {
-        quoteDao = new QuoteDaoMysql();
+        quoteDao = new QuoteDaoDummy();
     }
 
     @Override
