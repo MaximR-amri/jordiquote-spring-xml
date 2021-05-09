@@ -5,9 +5,8 @@ public class OriginalCowSay implements CowSay {
     QuoteDao quoteDao;
     Quote quote;
 
-
-    public OriginalCowSay() {
-        quoteDao = new QuoteDaoDummy();
+    public void setQuoteDao(QuoteDao quoteDao) {
+        this.quoteDao = quoteDao;
     }
 
     @Override
@@ -28,4 +27,6 @@ public class OriginalCowSay implements CowSay {
     public void voteDown() {
         quoteDao.dislikeQuote(quote);
     }
+
+
 }

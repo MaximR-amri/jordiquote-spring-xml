@@ -7,9 +7,17 @@ import java.util.Scanner;
 public class App {
 
   public static void main(String[] args) {
+    /**
+     * Dependency Injection is a technique of creating software in which objects do not create their dependencies on itself.
+     * instead objects declare dependencies that they need and it an external object or framework to provide
+     * concrete dependencies to objects
+     */
 
-    CowSay cowSay = new OriginalCowSay();
+    CowSay cowSay = new DragonCowSay();
+    QuoteDao quoteDao = new QuoteDaoMysql();
+    cowSay.setQuoteDao(quoteDao);
     cowSay.showQuote();
+
     Scanner in = new Scanner(System.in);
     System.out.println("Did you like this quote ? (y/n)");
     while(true) {
@@ -24,7 +32,5 @@ public class App {
         System.out.println("Please enter y/n");
       }
     }
-
-
   }
 }
