@@ -1,10 +1,13 @@
 package be.syntra.cowsay;
 
+import org.springframework.stereotype.Component;
+
 import java.io.IOException;
 import java.io.InputStream;
 import java.sql.*;
 import java.util.Properties;
 
+@Component
 public class QuoteDaoMysql implements QuoteDao {
     private static String url;
     private static String usr;
